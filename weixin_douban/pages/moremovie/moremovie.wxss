@@ -1,0 +1,85 @@
+/* pages/moremovie/moremovie.wxss */
+.more-container{
+  width:100%;
+  /* padding:20rpx; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.three-poster{
+  width:33.33%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  /* background:#3f6429; */
+  box-sizing: border-box;
+  padding:30rpx 0;
+}
+.gray-bg{
+  background: #eee;
+}
+.more-poster1{
+  width:150rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.more-poster1 image{
+  width:150rpx;
+  height:214rpx;
+}
+.poster-title{
+  color: black;
+  /* font-weight: bold; */
+  font-size: 24rpx;
+  margin-top: 12rpx;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.noscore{
+  font-size: 22rpx;
+  line-height: 42rpx;
+}
+.poster-score{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.star-father{
+  width:112rpx;
+  position: relative;
+  height:32rpx;
+  box-sizing: border-box;
+  /* line-height: 12px; */
+  /* padding-bottom: 5px; */
+}
+.text-star{
+  color:#e2e2e2;
+  position: relative;
+  height:32rpx;
+  font-size: 23rpx;
+  /* line-height: 32rpx; */
+}
+.text-star2{
+  color:#f19e38;
+  position: absolute;
+  /* width:40%; */
+  overflow: hidden;
+  top:0;
+  left:0;
+  height:32rpx;
+  font-size: 23rpx;
+  /* line-height: 32rpx; */
+}
+.text-score{
+  font-size: 22rpx;
+  /* line-height: 42rpx; */
+}
+.noscore{
+  font-size: 20rpx;
+}

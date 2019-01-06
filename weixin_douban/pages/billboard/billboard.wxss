@@ -1,0 +1,113 @@
+/* pages/billboard/billboard.wxss */
+.board-container{
+  padding:40rpx 20rpx 50rpx 20rpx;
+}
+.board-weekGood-poster,.board-weekHot-poster{
+  width:100%;
+  height:350rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.border-poster1,.border-poster2{
+  position: absolute;
+  /* background: rgba(100, 100, 100, 0.4); */
+  width:100%;
+  height:350rpx;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+.poster1_top{
+  font-size: 40rpx;
+  font-weight: 600;
+  color: white;
+  z-index: 3;
+}
+.poster1_bottom{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 3;
+}
+.poster_small{
+  width:300rpx;
+  height:200rpx;
+  position: relative;
+}
+.poster_small image{
+  width:130rpx;
+  height:180rpx;
+}
+.small_poster1{
+  top:0;
+  right:0;
+  position: absolute;
+  transition:0.5s;
+}
+.small_poster2{
+  top:0;
+  right:80rpx;
+  position: absolute;
+  transition:0.5s;
+}
+.small_poster3{
+  top:0;
+  left:0;
+  position: absolute;
+  transition:0.5s;
+}
+.center-move{
+  right:40rpx;
+}
+.right-move{
+  right:-50rpx;
+}
+.small_poster_num{
+  margin-left: 30rpx;
+  color: rgba(225,225,225,0.7);
+}
+
+/* 各项榜单 */
+.board_ul{
+  width:100%;
+  height:200rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.board_ul image{
+  width:200rpx;
+  height:200rpx;
+}
+.board_li{
+  width:510rpx;
+  height:160rpx;
+  border: 2rpx solid rgba(225,225,225,0.5);
+  border-left: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: space-between; */
+  justify-content: start;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+.li-num,.li-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 6rpx;
+}
+.board_li text{
+  font-size: 20rpx;
+  color:orange;
+}

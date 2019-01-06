@@ -1,0 +1,80 @@
+<!--pages/profile/profile.wxml-->
+<view class='profile'>
+  <image class='profileBg' src="/pages/static/img/profile/profile_bg.jpg"></image>
+  <view class='profile_user'>
+    <button class='profile_button'>登录</button>
+  </view>
+  <view class='profile_contain'>
+    <image class='adv_pic' src="/pages/static/img/profile/adv_pic.png"></image>
+    <view class='profile_ul_title'>
+      <text class='profile_title'>我的书影音</text>
+      <view class='profile_more' decode='true'>登录查看 <view class='arrow'></view></view>
+    </view>
+    <view class='profile_movie'>
+      <image class='profile_icon' src="/pages/static/img/profile/profile_icon1.png"></image>
+      <view class='profile_li'>
+        <view class='profile_num'>
+          <text>观影分析</text> 
+          <view>
+            <text class='big_num'>0 </text>
+            <text class='has_look'>看过</text>
+          </view>
+        </view>
+        <view class='profile_mark'>
+          <view class='profile_mark_left'>
+            <text>标记10部影片</text>
+            <text>开启观影分析</text>
+          </view>
+          <view class='profile_open'>
+            <button>立即开启</button>
+            <view class='arrow'></view>
+          </view>   
+        </view>
+      </view>
+    </view>
+    <view class='profile_book'>
+      <image class='profile_icon' src="/pages/static/img/profile/profile_icon2.png"></image>
+      <view class='profile_li'>
+        <view class='profile_num'>
+          <text>读书分析</text> 
+          <view>
+            <text class='big_num'>0 </text>
+            <text class='has_look'>读过</text>
+          </view>
+        </view>
+        <view class='profile_mark'>
+          <view class='profile_mark_left'>
+            <text>标记10本书</text>
+            <text>开启读书分析</text>
+          </view>
+          <view class='profile_open'>
+            <button>立即开启</button>
+            <view class='arrow'></view>
+          </view>   
+        </view>
+      </view>
+    </view>
+    <view class='profile_music'>
+      <image class='profile_icon' src="/pages/static/img/profile/profile_icon3.png"></image>
+      <view class='profile_li'>
+        <view class='profile_num'>
+          <text>音乐分析</text> 
+          <view>
+            <text class='big_num'>0 </text>
+            <text class='has_look'>听过</text>
+          </view>
+        </view>
+        <view class='profile_mark'>
+          <view class='profile_mark_left'>
+            <text>标记10张唱片</text>
+            <text>开启音乐分析</text>
+          </view>
+          <view class='profile_open'>
+            <button>立即开启</button>
+            <view class='arrow'></view>
+          </view>   
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

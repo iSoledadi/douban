@@ -1,0 +1,62 @@
+<!--pages/billboard/billboard.wxml-->
+<view class='board-container'>
+  <!-- 顶部电影榜海报 -->
+  <view class='board-weekGood-poster'>
+    <image class='border-poster1' src="/pages/static/img/banner/banner11.jpg"></image>
+    <text class='poster1_top'>一周口碑电影榜</text>
+    <view class='poster1_bottom'>
+      <view class='poster_small'>
+        <view class='small_poster1' hover-class='right-move'>
+          <image src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537733205.jpg" mode="aspectFill" lazy-load></image>
+        </view>
+        <view class='small_poster2' hover-class='center-move'>
+          <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2541824676.jpg"></image>
+        </view>
+        <view class='small_poster3'>
+          <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2542867516.jpg"></image>
+        </view>
+      </view>
+      <text class='small_poster_num'>+10</text>
+    </view>
+  </view>
+  <view class='board-weekHot-poster'>
+    <image class='border-poster2' src="/pages/static/img/billboard/billboard_hot_bg.jpg"></image>
+    <text class='poster1_top'>一周热门电影榜</text>
+    <view class='poster1_bottom'>
+      <view class='poster_small'>
+        <view class='small_poster1' hover-class='right-move'>
+          <image mode="aspectFill" lazy-load src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2542848758.jpg"></image>
+        </view>
+        <view class='small_poster2' hover-class='center-move'>
+          <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2537158013.jpg"></image>
+        </view>
+        <view class='small_poster3'>
+          <image mode="aspectFill" lazy-load src="https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2541280047.jpg"></image>
+        </view>
+      </view>
+      <text class='small_poster_num'>+10</text>
+    </view>
+  </view>
+  <!-- 各项排行榜 -->
+  <view class='board_ul' wx:for="{{borderList}}" wx:key='index'>
+    <image src="{{item.img_url}}" mode="aspectFill"></image>
+    <view class='board_li'>
+      <view class='li-num'>
+        <view>1.</view>
+        <view>2.</view>
+        <view>3.</view>
+      </view>
+      <view class='li-title'>
+        <view>
+          {{item.title1}} <text>{{item.score1}}分</text>
+        </view>
+        <view>
+          {{item.title2}} <text>{{item.score2}}分</text>
+        </view>
+        <view>
+          {{item.title3}} <text>{{item.score3}}分</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

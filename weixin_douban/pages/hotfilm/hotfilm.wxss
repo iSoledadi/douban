@@ -1,0 +1,106 @@
+/* pages/hotfilm/hotfilm.wxss */
+.hot-film{
+  width:100%;
+  background: rgb(240,240,240);
+}
+.hot-top{
+  width:100%;
+  position: relative;
+  height:300rpx;
+}
+.hot-top image{
+  width:100%;
+  height:300rpx;
+  border-radius: 0;
+}
+.hot-top-title{
+  font-size: 55rpx;
+  position: absolute;
+  top:100rpx;
+  left:180rpx;
+  color: #fff;
+}
+.hot-container-num{
+  display: flex;
+  justify-content: start;
+  font-size: 22rpx;
+  color:#999;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 40rpx 30rpx 10rpx 30rpx;
+  height:100rpx;
+}
+.hot-haslook{
+  color:#000;
+  border-bottom: 4rpx solid #ddd;
+}
+.num-span{
+  margin:0 8rpx;
+}
+.hot-board{
+  width:100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx 0 30rpx;
+}
+.hot-num{
+  width:70rpx;
+  background: #aaa;
+  border-radius: 7rpx;
+  box-sizing: 10rpx 15rpx;
+  color:#fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+.hot-poster{
+  width:150rpx;
+  height:214rpx;
+}
+.hot-content{
+  width:100%;
+  box-sizing: border-box;
+  padding-bottom:20rpx;
+  display: flex;
+  justify-content: space-between;
+  height:214rpx;
+}
+.hot-text{
+  width:250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hot-score{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.star-gray{
+  position: relative;
+  color: #ddd;
+}
+.star-orange{
+  position: absolute;
+  overflow: hidden;
+  color:orange;
+  width:50%;
+}
+.hot-msg{
+  color:#ddd;
+  font-size: 24rpx;
+}
+.hot-wantlook{
+  width:150rpx;
+  border-left: 1.6rpx dashed #aaa;
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color:orange;
+  align-items: center;
+  justify-content: center;
+}
+.hot-wantlook image{
+  width:18rpx;
+  height:18rpx;
+}

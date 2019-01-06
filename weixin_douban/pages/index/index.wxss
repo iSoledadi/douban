@@ -1,0 +1,141 @@
+/**index.wxss**/
+ /* "navigationBarBackgroundColor": "#5da768", */
+ /* ↑为旧版颜色 */
+.search{
+  width:100%;
+  height:80rpx;
+  background:#43bc56;
+  position: relative;
+  padding:14rpx 40rpx;
+  box-sizing: border-box;
+}
+.search image{
+  width:30rpx;
+  height:30rpx;
+  position: absolute;
+  top:23rpx;
+  /* left:332rpx; */
+}
+.search_input{
+  background:#fff;
+  width:100%;
+  height:52.5rpx;
+  margin:0 auto;
+  border-radius: 10rpx;
+  color:#8a8a8a;
+  font-size: 26rpx;
+  line-height: 52.5rpx;
+  /* text-align: center; */
+  /* padding-left: 330rpx; */
+  box-sizing: border-box;
+}
+.search-left{
+  left:50rpx;
+}
+.search-center{
+  left:332rpx;
+}
+.input-center{
+  padding-left: 330rpx;
+}
+.input-left{
+  padding-left: 50rpx;
+}
+.list1{
+  width:750rpx;
+  height:350rpx; 
+}
+.list1 image{
+  width:100%;
+  height:350rpx; 
+  border-radius: 0;
+}
+scroll-view{
+  margin-bottom: 20rpx;
+}
+.hengKuang{
+  display:flex;
+  justify-content: space-between;
+  width:950rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+.gray-bg{
+  background: #eee;
+}
+.hengKuang image{
+  width:150rpx;
+  height:214rpx;
+  /* border-radius: 5px; */
+}
+.index_poster{
+  width:150rpx;
+  display:flex;
+  flex-direction: column;
+  font-size: 20rpx;
+  color: #333;
+}
+.poster-title{
+  color: black;
+  font-weight: bold;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.noscore{
+  font-size: 22rpx;
+  line-height: 42rpx;
+}
+.poster-score{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.star-father{
+  width:112rpx;
+  position: relative;
+  height:32rpx;
+}
+.text-star{
+  color:#e2e2e2;
+  position: relative;
+  height:32rpx;
+  font-size: 23rpx;
+}
+.text-star2{
+  color:#f19e38;
+  position: absolute;
+  /* width:40%; */
+  overflow: hidden;
+  top:0;
+  left:0;
+  height:32rpx;
+  font-size: 23rpx;
+}
+.text-score{
+  font-size: 20rpx;
+  line-height: 42rpx;
+}
+
+.index-pics{
+  display:flex;
+  justify-content: space-between;
+  padding:30rpx;
+  font-size: 30rpx;
+}
+.pics-title{
+  font-weight: bold
+}
+.pics-more{
+  color:#43bc56;
+  display: flex;
+  align-items: center;
+}
+#greenJiantou{
+  border-top: 4rpx solid #43bc56;
+  border-right: 4rpx solid #43bc56;
+}

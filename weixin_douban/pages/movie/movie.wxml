@@ -1,0 +1,4 @@
+<!--pages/movie/movie.wxml-->
+<view>
+  <text>这是movie页面</text>
+</view>

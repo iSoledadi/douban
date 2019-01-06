@@ -1,0 +1,36 @@
+<!--pages/hotfilm/hotfilm.wxml-->
+<view class='hot-film'>
+  <view class='hot-top'>
+    <image mode='aspectFill' lazy-load src="/pages/static/img/billboard/billboard_hot_bg.jpg"></image>
+    <view class='hot-top-title'>一周热门电影榜</view>
+  </view>
+  <view class='hot-container-num'>
+    <view class='hot-haslook'>看过0部</view>
+    <view class='num-span'>/</view>
+    <view>共10部</view>
+  </view>
+  <!-- 电影榜单 -->
+  <view class='hot-board'>
+    <view class='hot-num'>No.1</view>
+    <view class='hot-content'>
+      <view>
+        <image class='hot-poster' lazy-load mode="aspectFill" src="https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2541280047.jpg"></image>
+      </view>
+      <view class='hot-text'>
+        <view class='hot-title'>海王</view>
+        <view  class='hot-score'>
+          <view class='star-gray'>
+            ★★★★★
+            <view class='star-orange'>★★★★★</view>
+          </view>
+          <view>7.9</view>
+        </view>
+        <view class='hot-msg'>美国 澳大利亚 / 动作 奇幻冒险 / 温子仁 / 杰森·莫玛 艾梅柏·希尔德</view>
+      </view>
+      <view class='hot-wantlook'>
+        <image src="/pages/static/img/detail1/btn_icon2.png"></image>
+        <view>看过</view>
+      </view>
+    </view>
+  </view>
+</view>

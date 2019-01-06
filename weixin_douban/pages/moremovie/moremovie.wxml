@@ -1,0 +1,20 @@
+<!--pages/moremovie/moremovie.wxml-->
+<view class='more-container'>
+  <view class='three-poster' wx:for="{{list}}" wx:key="index" hover-class='gray-bg'>
+    <!-- 第一张海报 -->
+    <view class='more-poster1'>
+       <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+          <text class='poster-title'>{{item.title}}</text>
+          <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+          <view class='poster-score' wx:if="{{item.star}}">
+            <view class='star-father'>
+              <view class='text-star'>
+                ★★★★★
+                 <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+            </view>
+            <text class='text-score' wx:if="item.score">{{item.score}}</text>
+          </view>
+    </view>
+  </view>
+</view>

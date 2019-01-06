@@ -1,0 +1,161 @@
+<!--index.wxml-->
+<view class="content">
+  <view class='search'>
+    <image class="{{iscenter?'search-center':'search-left'}}" src="/pages/static/img/banner/scale.png"></image>
+    <input class="search_input {{iscenter?'input-center':'input-left'}}" type="text" placeholder='搜索' catchtap='inInput' bindblur='toCenter' value="{{inputTxt}}"></input>
+  </view>
+  <view>
+    <swiper class='list1' autoplay circular indicator-dots='true' indicator-color='#aaa' indicator-active-color='#5da768'>
+      <swiper-item>
+        <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/l/public/p537666554.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/l/public/p443410950.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image mode="aspectFill" lazy-load src="https://img3.doubanio.com/view/photo/l/public/p2518208870.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image mode="aspectFill" lazy-load src="http://img5.mtime.cn/mg/2018/06/01/175000.86967734.jpg"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 影院热映 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>影院热映</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+     <scroll-view scroll-x="true">
+      <view class="hengKuang">
+        <view class="index_poster" hover-class='gray-bg' wx:for="{{list1}}" wx:key="index" bindtap='enterDetail' data-id="{{item.id}}">
+          <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+          <text class='poster-title'>{{item.title}}</text>
+          <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+          <view class='poster-score' wx:if="{{item.star}}">
+            <view class='star-father'>
+              <view class='text-star'>★★★★★</view>
+              <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+            </view>
+            <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 豆瓣热门 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>豆瓣热门</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+      <scroll-view scroll-x="true">
+        <view class="hengKuang">
+          <view class="index_poster" hover-class='gray-bg' wx:for="{{list2}}" wx:key="index">
+            <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+            <text class='poster-title'>{{item.title}}</text>
+            <text class='noscore' wx:if="{{item.noscore}}">{{item.noscore}}</text>
+            <view class='poster-score' wx:if="{{item.star}}">
+              <view class='star-father'>
+                <view class='text-star'>★★★★★</view>
+                <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+              <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <!-- 近期热门剧集 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>近期热门剧集</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+      <scroll-view scroll-x="true">
+        <view class="hengKuang">
+          <view class="index_poster" hover-class='gray-bg' wx:for="{{list3}}" wx:key="index">
+            <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+            <text class='poster-title'>{{item.title}}</text>
+            <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+            <view class='poster-score' wx:if="{{item.star}}">
+              <view class='star-father'>
+                <view class='text-star'>★★★★★</view>
+                <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+              <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <!-- 近期热门综艺节目 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>近期热门综艺节目</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+      <scroll-view scroll-x="true">
+        <view class="hengKuang">
+          <view class="index_poster" hover-class='gray-bg' wx:for="{{list4}}" wx:key="index">
+            <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+            <text class='poster-title'>{{item.title}}</text>
+            <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+            <view class='poster-score' wx:if="{{item.star}}">
+              <view class='star-father'>
+                <view class='text-star'>★★★★★</view>
+                <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+              <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <!-- 畅销图书 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>畅销图书</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+      <scroll-view scroll-x="true">
+        <view class="hengKuang">
+          <view class="index_poster" hover-class='gray-bg' wx:for="{{list5}}" wx:key="index">
+            <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+            <text class='poster-title'>{{item.title}}</text>
+            <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+            <view class='poster-score' wx:if="{{item.star}}">
+              <view class='star-father'>
+                <view class='text-star'>★★★★★</view>
+                <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+              <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <!-- 热门单曲榜 -->
+  <view>
+     <view class="index-pics">
+      <text class='pics-title'>热门单曲榜</text>
+      <view decode="true" class='pics-more' catchtap='jumpExam2' data-id="{{list1[0].title}}">查看更多<view id="greenJiantou" class='arrow'></view></view>
+     </view>
+      <scroll-view scroll-x="true">
+        <view class="hengKuang">
+          <view class="index_poster" hover-class='gray-bg' wx:for="{{list6}}" wx:key="index">
+            <image mode="aspectFill" lazy-load  src="{{item.img_url}}"></image>
+            <text class='poster-title'>{{item.title}}</text>
+            <text class='noscore' wx:if="item.noscore">{{item.noscore}}</text>
+            <view class='poster-score' wx:if="{{item.star}}">
+              <view class='star-father'>
+                <view class='text-star'>★★★★★</view>
+                <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+              </view>
+              <text class='text-score' wx:if="{{item.score}}">{{item.score}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+</view>

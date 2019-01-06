@@ -1,0 +1,193 @@
+<!--pages/detail1/detail1.wxml-->
+<view class='detail-container'>
+  <!-- 详情页头部 -->
+  <view class='detail-top'>
+    <image class='detail-poster' src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541280047.jpg" lazy-load></image>
+    <view class='detail-top-text'>
+      <view>
+        <view class='detail-top-title'>海王 (2018)</view>
+        <view class='detail-top-smallTitle'>Aquaman (2018)</view>
+      </view>
+      <view>动作 奇幻 冒险 / 美国 澳大利亚 / 2018年12月07日上映 / 片长143分钟</view>
+      <view class='detail-top-button'>
+        <button class='top-btn'><image src='/pages/static/img/detail1/btn_icon1.png' lazy-load></image> 想看</button>
+        <button class='top-btn'><image src='/pages/static/img/detail1/btn_icon2.png' lazy-load></image> 看过</button>
+      </view>
+    </view>
+  </view>
+  <!-- 详情页分数 -->
+  <view class='detail-score'> 
+    <view class='score-title'>
+      <view>豆瓣评分™</view>
+      <view id="detailJiantou" class='arrow'></view>
+    </view>
+    <view class='score-container'>
+      <view class='score-left'>
+        <view class='score-num'>7.5</view>
+        <view class='star-father'>
+          <view class='text-star'>★★★★★</view>
+          <view class='text-star2'>★★★★★</view>
+        </view>
+      </view>
+      <view class='score-right'>
+        <view class='score-pic'>
+          <view class='score-stars'>
+            <view>★★★★★</view>
+            <view>★★★★</view>
+            <view>★★★</view>
+            <view>★★</view>
+            <view>★</view>
+          </view>
+          <view class='score-process'>
+            <view class='process-gray'>
+              <view class='process-orange1'></view>
+            </view>
+            <view class='process-gray'>
+              <view class='process-orange2'></view>
+            </view>
+            <view class='process-gray'>
+              <view class='process-orange3'></view>
+            </view>
+            <view class='process-gray'>
+              <view class='process-orange4'></view>
+            </view>
+            <view class='process-gray'>
+              <view class='process-orange5'></view>
+            </view>
+          </view>
+        </view>
+        <view class='small-bottom-score'>288018人评分</view>
+      </view>
+    </view>
+  </view>
+  <!-- 详情页简介 -->
+  <view class='detail-introduce'>
+    <view class='introduce-title'>简介</view>
+    <view class='introduce-container {{isShowAllContent ?"" :"content-breif"}}'>
+      华纳兄弟影片公司与导演温子仁联手为您呈现波澜壮阔的动作冒险电影——《海王》！横跨七大洋的广阔海底世界徐徐展开，给观众带来震撼十足的视觉奇观。本片由杰森·莫玛领衔主演，讲述半人半亚特兰蒂斯血统的亚瑟·库瑞踏上永生难忘的征途——他不但需要直面自己的特殊身世，更不得不面对生而为王的考验：自己究竟能否配得上“海王”之名。
+    </view>
+    <view class='introduce-back' catchtap='showIntroduce'>{{showtext}}</view>
+  </view>
+  <!-- 电影角色 -->
+  <view class='detail-role'>
+    <view class='detail-title'>影人</view>
+     <scroll-view scroll-x="true">
+      <view class="hengKuang">
+        <view class="index_poster" wx:for="{{list1}}" wx:key="index">
+          <image  src="{{item.img_url}}"></image>
+          <text class='poster-name'>{{item.name}}</text>
+          <text class='poster-job'>{{item.job}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 剧照和预告片 -->
+  <view class='detail-picture'>
+    <view class='pic-title'>
+      <view>预告片/剧照</view>
+      <view class='pic-more'>全部 652<view class='arrow'></view>  </view>
+    </view>
+     <scroll-view scroll-x="true">
+      <view class="hengKuang2">
+        <!-- <view class="film_poster" wx:for="{{list2}}" wx:key="index">
+          <video src="" controls='true' wx:if="{{item.vedio}}"></video>
+          <image wx:if="{{item.img_url}}" src="{{item.img_url}}" mode="scaletoFill"></image>
+        </view> -->
+        <!-- <view> -->
+          <video src='{{videoUrl}}' style="width:500rpx;height:321rpx" controls='true'></video>
+          <image src='https://img1.doubanio.com/view/photo/s/public/p2459657787.jpg' style='width:252rpx' lazy-load></image>
+          <image src='https://img1.doubanio.com/view/photo/s/public/p2456697541.jpg' style='width:321rpx' lazy-load></image>
+          <image src='https://img1.doubanio.com/view/photo/s/public/p2536095975.jpg' style='width:572.5rpx' lazy-load></image>
+          <image src='https://img1.doubanio.com/view/photo/s/public/p2528710385.jpg' style='width:765rpx' lazy-load></image>
+          <image src='https://img1.doubanio.com/view/photo/s/public/p2459658549.jpg' style='width:480.6rpx' lazy-load></image>
+        <!-- </view> -->
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 短评 -->
+  <view class='short-comment'>
+    <view class='short-title'>
+      <view>短评</view>
+      <view class='pic-more'>全部 123147<view class='arrow'></view></view>
+    </view>
+    <view wx:for="{{list3}}" wx:key="index">
+      <view class='short-user'>
+        <view>
+          <image src='{{item.img_url}}'></image>
+        </view>
+        <view class='short-uname'>
+          <view>{{item.name}}</view>
+          <view class='short-star'>
+            <view class='short-star-gray'>★★★★★
+              <view class='short-star-orange' style='width:{{item.star}}%'>★★★★★</view>
+            </view>
+            <view>{{item.date}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='short-comment-container'>
+        <text>{{item.container}}</text>
+      </view>
+      <view class='short-agree' >
+        <view>
+          <image src="{{item.isagree?item.agree:item.noagree}}" catchtap='doAgree' data-id="{{item.id}}"></image>
+        </view>
+        <!-- <view data-num="{{item.agreeNum}}">{{isAddnum?item.agreeNum+1:item.agreeNum}}</view> -->
+        <view>{{item.agreeNum}}</view>
+      </view>
+    </view>
+    <view class='short-title'>
+      <view>查看全部短评</view>
+      <view class='arrow'></view>
+    </view>
+  </view>
+  <!-- 喜欢这部电影的人也喜欢 -->
+  <view class='detail-other'>
+    <view class='detail-title'>喜欢这部电影的人也喜欢</view>
+     <scroll-view scroll-x="true">
+      <view class="hengKuang">
+        <view class="index_poster" wx:for="{{list4}}" wx:key="index">
+          <image  src="{{item.img_url}}"></image>
+          <view class='poster-title'>{{item.title}}</view>
+          <view class='poster-score' wx:if="{{item.star}}">
+            <view class='star-father'>
+              <view class='text-star'>★★★★★</view>
+              <view class='text-star2' style="width:{{item.star}}%">★★★★★</view>
+            </view>
+            <view class='text-score' wx:if="item.score">{{item.score}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 影评 -->
+  <view class='detail-long-comment'>
+    <view class='detail-title'>
+      影评
+      <text class='long-comment-num'>2112条</text>
+    </view>
+    <view class='long-comment-container' wx:for="{{list5}}" wx:key="index">
+      <view class='long-msg'>
+        <view>
+          <image src='{{item.img_url}}' lazy-load></image>
+        </view>
+        <view class='long-user'>{{item.name}}看过</view>
+        <view class='short-star' wx:if="{{item.star}}">
+            <view class='short-star-gray'>★★★★★
+              <view class='short-star-orange' style='width:{{item.star}}%'>★★★★★</view>
+            </view>
+          </view>
+      </view>
+      <view class='long-title'>{{item.title}}</view>
+      <view class='long-content'>{{item.contain}}</view>
+      <view class='long-bottom'>
+        <view>{{item.reply}}回复</view>
+        <view class='long-span'>·</view>
+        <view>{{item.agree}}有用</view>
+        <view class='long-span'>·</view>
+        <view>{{item.forward}}转发</view>
+      </view>
+    </view>
+  </view>
+
+</view>

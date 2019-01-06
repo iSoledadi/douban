@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/hotfilm/hotfilm",
+    "pages/index/index",
+    "pages/detail1/detail1",
+    "pages/logs/logs",
+    "pages/movie/movie",
+    "pages/billboard/billboard",
+    "pages/profile/profile",
+    "pages/moremovie/moremovie"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#43bc56",
+    "navigationBarTitleText": "豆瓣评分",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "影视",
+        "iconPath": "pages/static/img/tabbar/movie.png",
+        "selectedIconPath": "pages/static/img/tabbar/movie-active.png"
+      },
+      {
+        "pagePath": "pages/billboard/billboard",
+        "text": "榜单",
+        "iconPath": "pages/static/img/tabbar/billboard.png",
+        "selectedIconPath": "pages/static/img/tabbar/billboard-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "pages/static/img/tabbar/profile.png",
+        "selectedIconPath": "pages/static/img/tabbar/profile-active.png"
+      }
+    ]
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.2.4",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}
